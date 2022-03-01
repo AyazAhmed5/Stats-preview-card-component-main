@@ -1,0 +1,107 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: hsl(244, 38%, 16%);
+  width: 80vw;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.Image-div {
+  border-radius: 0px 15px 15px 0px;
+  background-color: hsl(277, 64%, 61%);
+}
+.image {
+  border-radius: 0px 15px 15px 0px;
+  background-blend-mode: overlay;
+  opacity: 0.6;
+  height: 100%;
+}
+.em {
+  color: hsl(277, 64%, 61%);
+}
+.left {
+  color: hsl(0, 0%, 100%);
+padding: 1rem;
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 0.5fr 1.5fr 1.5fr 0.4fr;
+grid-template-areas: ". heading heading ." ". para para ." ". number number .";
+font-family: "Lexend-Deca", sans-serif;
+}
+.heading {
+  grid-area: heading;
+  max-width: 90%;
+}
+.para {
+  width: fit-content;
+  grid-area: para;
+  font-family: "Inter", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  max-width: 90%;
+}
+.numbers {
+  grid-auto-flow: column;
+
+   grid-area: number;
+  display: grid;
+  color: hsl(0, 0%, 100%); 
+}
+.header-number {
+  font-weight: 700;
+  line-height: 0.1;
+}
+.header-para {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Inter", sans-serif;
+}
+
+@media only screen and (max-width: 580px) {
+  body {
+    padding: 15% 3% 15% 3%;
+    display: block;
+  }
+  .container {
+    width: fit-content;
+    border-radius: 15px 15px 15px 15px;
+    display: grid;
+    height: max-content;
+    grid-template-rows: 0.6fr;
+  }
+  .Image-div {
+    border-radius: 15px 15px 0 0;
+    grid-row: 1;
+  }
+  .image {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+  .left {
+    display: block;
+    padding: -1.5rem;
+    
+  }
+  .heading {
+    font-size: clamp(1rem, 1.8rem, 2rem);
+    text-align: center;
+    max-width: none;
+  }
+  .para {
+    text-align: center;
+    margin-bottom: 3em;
+     max-width: none;
+  }
+  .numbers {
+    display: grid;
+  text-align: center;
+  grid-gap: 2em;
+  grid-auto-flow: row;
+  }
+}
