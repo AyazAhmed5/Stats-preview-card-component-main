@@ -20,7 +20,8 @@ body {
 .image {
   border-radius: 0px 15px 15px 0px;
   background-blend-mode: overlay;
-  opacity: 0.6;
+   mix-blend-mode: multiply;
+  opacity: 0.8;
   height: 100%;
 }
 .em {
